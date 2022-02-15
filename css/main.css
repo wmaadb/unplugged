@@ -97,6 +97,57 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+   <!-- Google Fonts --!>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:500,700" rel="stylesheet">   
+
+/* General Styles */
+ html {
+  font-size: 16px;
+ }
+
+ body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1 em;
+ }
+
+ ul,
+ ol {
+
+ }
+
+ a {
+  color: #e2e3ed;
+  text-decoration: none;
+ }
+
+ h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2 em;
+ }
+
+ h3,
+ h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25 em;
+ }
+
+ p {
+
+ }
+
+ img {
+
+ }
+
+ figure {
+
+ }
+
+ address {
+
+ }
+
    .content-wrapper {
     width: 90%;
     margin: 50px 0;
@@ -240,7 +291,40 @@ aside {
 /* ==========================================================================
    About Page
    ========================================================================== */
+  .contact-info {
+    width: 100%;
+    padding-top: 30px;
+  }
 
+  .contact-info ul {
+    list-style: none;
+    padding 0px;
+  }
+
+  .contact-info ul li {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .map-container {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .strong {
+    font-weight: bold;
+  }
+  
    .mission {
     display: flex;
     justify-content: center;
@@ -273,17 +357,19 @@ aside {
   .faq .content-wrapper {
     margin: 50px 0 0 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
   }
   
   .faq h2 {
     margin-bottom: 40px;
+    width: 100%;
   }
 
   .faq-content {
     margin-bottom: 50px;
+    flex-basis: 40%;
   }
 
 /* ==========================================================================
@@ -294,8 +380,7 @@ aside {
  * Hide visually and from screen readers
  */
 
-.hidden,
-[hidden] {
+.hidden {
   display: none !important;
 }
 
@@ -308,9 +393,9 @@ aside {
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.sr-only {
+.visuallyhidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -327,8 +412,8 @@ aside {
  * https://www.drupal.org/node/897638
  */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -378,10 +463,141 @@ aside {
   /*Tablet styles here*/
 }
 
-@media only screen and (min-width: 1200px) {
-  /*Desktop styles here*/
-}
+  
+    /* General styles */
+    .content-wrapper {
+      max-width: 640px;
+      margin: 100px 0;
+    }
+  
+    /* Header */
+    header {
+      justify-content: space-around;
+      padding: 33px 0;
+    }
+  
+    header .content-wrapper {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    header nav {
+      width: 20%;
+    }
+  
+    header nav ul {
+      justify-content: space-between;
+    }
+  
+    .header-divider {
+      display: none;
+    }
+    /* Hero Area */
+  
+    /* Aside */
+    aside .content-wrapper {
+      margin: 50px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+    }
+  
+    aside .content-wrapper .form-description,
+    aside .content-wrapper .form {
+      width: 40%;
+      margin: 0;
+    }
+  
+    /* Features */
+    .features article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      flex-basis: 50%;
+    }
+    
+    .features .features-item-description {
+      width: 50%;
+    }
+  
+    /* Reviews */
+    .reviews article {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .reviews article div {
+      width: 49%;
+    }
+  
+    /* Footer */
+    footer .content-wrapper {
+      width: 65%;
+      margin: 100px 0;
+    }
+  
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    footer .contact {
+      margin-bottom: 0;
+    }
+  
+    footer .copyright {
+      width: 100%;
+    }
+  
+    /* ==========================================================================
+     About Page
+     ========================================================================== */
+  
+    .mission-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px
+    }
+  
+    .mission-content p {
+      width: 45%;
+    }
+  
+    .contact-section .content-wrapper h2 {
+      width: 80%;
+    }
+  
+    .contact-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    /* ==========================================================================
+     FAQ Page
+     ========================================================================== */
+  
+    .faq .content-wrapper {
+      justify-content: space-between;
+    }
+  
+    .faq-content {
+      flex-basis: 45%;
+    }
+  
+    .faq h2 {
+      width: 100%;
+    }
 
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -395,6 +611,7 @@ aside {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
