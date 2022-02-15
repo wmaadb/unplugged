@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Unplugged Retreat</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +27,9 @@
 
 <header>
   <div class="content wrapper">
-      <a href="#"><img src="" alt="unplugged logo"></a>
+      <a href="#">
+        <img src="" alt="unplugged logo">
+      </a>
       <div class="header-divider"></div>
       <nav>
           <ul>
@@ -44,6 +47,7 @@
     </div>
 
   </section>
+
 <aside>
   <div class="content-wrapper">
     <div class="form-description">
@@ -139,12 +143,23 @@
 
   <!-- Add your site or application content here -->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    window.ga = function () { ga.q.push(arguments) 
+    }; 
+    ga.q = []; 
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); 
+    ga('set', 'anonymizeIp', true); 
+    ga('set', 'transport', 'beacon'); 
+    ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 
