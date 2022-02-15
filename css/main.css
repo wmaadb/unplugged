@@ -98,8 +98,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   /*-- Google Fonts --
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:500,700" rel="stylesheet">   */
+   /* Google Fonts */
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:500,700" rel="stylesheet">
+
 
 /* General Styles */
  html {
@@ -107,13 +108,14 @@ textarea {
  }
 
  body {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1 em;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
  }
 
  ul,
  ol {
-
+  list-style-type: none;
  }
 
  a {
@@ -123,17 +125,19 @@ textarea {
 
  h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2 em;
+  font-size: 1.875 em;
  }
 
  h3,
  h4 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.25 em;
+  margin: 20px 0;
+  font-size: 1.125 em;
  }
 
  p {
-
+  font-size: .875em;
+  line-height: 1.285;
  }
 
  img {
@@ -145,7 +149,7 @@ textarea {
  }
 
  address {
-
+  font-style: normal;
  }
 
  .content-wrapper {
@@ -598,6 +602,10 @@ aside {
 @media only screen and (min-width:1200px) {
   /*Desktop styles here*/
 
+  header {
+    padding: 15px 0;
+  }
+
   .content-wrapper {
     max-width: 960px;
   }
@@ -649,9 +657,8 @@ aside {
   }
 
 }
-
  
-/* ==========================================================================
+/* =========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
