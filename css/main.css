@@ -97,18 +97,15 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-   /* Google Fonts */
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:500,700" rel="stylesheet">
-
-
+   
 /* General Styles */
+
  html {
   font-size: 16px;
  }
 
  body {
-  font-size: 1 em;
+  font-size: 1em;
   font-family: 'Open Sans', sans-serif;
   color: #e2e3ed;
   text-align: left;
@@ -127,14 +124,14 @@ textarea {
  h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 1.875 em;
+  font-size: 1.875em;
  }
 
  h3,
  h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 1.125 em;
+  font-size: 1.125em;
   margin: 20px 0;
  }
 
@@ -144,11 +141,11 @@ textarea {
  }
 
  img {
-
+  width: 100%;
  }
 
  figure {
-
+  margin: 0;
  }
 
  address {
@@ -164,6 +161,7 @@ textarea {
 
 header,
 footer {
+  background-color: #202322;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,10 +180,18 @@ header .content-wrapper {
   flex-flow: row wrap;  
 }
 
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 .header-divider {
   background: #3a3a3a;
-  width: 100%;
   height: 1px;
+  width: 100%;
   margin: 10px 0 20px 0;
 }
 
@@ -198,16 +204,20 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
 }
 
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
+}
+
+header nav ul li {
+  font-size: 1.125em;
 }
 
 footer {
+  text-align: center;
   flex-direction: column;
 }
 
@@ -243,6 +253,10 @@ footer .copyright {
 /* ----------- Mobile Styles - Homepage ----------- */
 
 .hero-area {
+  background: url(../img/bridge.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -254,6 +268,8 @@ footer .copyright {
   font-weight: 500; 
   line-height: 1.2; 
 }
+
+/*  Aside  */
 
 aside {
   background-color: #527158;
@@ -292,6 +308,9 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url('../img/sittingonrug.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -340,61 +359,27 @@ input[type=button] {
 /* ==========================================================================
    About Page
    ========================================================================== */
-  .contact-info {
-    width: 100%;
-    padding-top: 30px;
-  }
+ 
+.mission {
+  background-color: #527158;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 
-  .contact-info ul {
-    list-style: none;
-    padding: 0px;
-  }
+.contact-section {
+  background-color: #2a423a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 
-  .contact-info ul li {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .map figure {
-    width: 100%;
-    height: 0; 
-    padding-bottom: 125%; 
-    overflow: hidden;
-    position: relative;
-  }
-
-  .map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .strong {
-    font-weight: bold;
-  }
-
-  .mission {
-    background-color: #527158;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  
-  .contact-section {
-    background-color: #2a423a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-
-  .contact-content p {
-    margin: 0;
-  }
-  
+.contact-content p {
+  margin: 0;
+}
+ 
   /* ==========================================================================
      FAQ Page
      ========================================================================== */
@@ -417,12 +402,11 @@ input[type=button] {
   
   .faq h2 {
     margin-bottom: 40px;
-    width: 100%;
+    line-height: 1;
   }
 
   .faq-content {
     margin-bottom: 50px;
-    flex-basis: 40%;
   }
 
 .faq-content h4 {
@@ -637,6 +621,7 @@ input[type=button] {
       width: 85%;
     }
 
+    .reviews article figure,
     .reviews article div {
       width: 49%;
     }
@@ -679,30 +664,59 @@ input[type=button] {
     /* ==========================================================================
      About Page
      ========================================================================== */
+     .contact-info {
+      width: 100%;
+      padding-top: 30px;
+    }
   
-    .mission-content {
+    .contact-info ul {
+      list-style: none;
+      padding: 0px;
+    }
+  
+    .contact-info ul li {
+      display: inline-block;
+      vertical-align: top;
+    }
+  
+    .map figure {
+      width: 100%;
+      height: 0; 
+      padding-bottom: 125%; 
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .map iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .strong {
+      font-weight: bold;
+    }
+  
+    .mission {
+      background-color: #527158;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding-top: 20px
+      flex-flow: row wrap;
     }
-  
-    .mission-content p {
-      width: 45%;
-    }
-  
-    .contact-section .content-wrapper h2 {
-      width: 80%;
-    }
-  
-    .contact-content {
+    
+    .contact-section {
+      background-color: #2a423a;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
     }
   
-    .contact-content h4 {
-      font-size: 1.5em;
+    .contact-content p {
+      margin: 0;
     }
 
     /* ==========================================================================
@@ -727,7 +741,6 @@ input[type=button] {
       line-height: 1.125;
     }
   }
-  
   
 @media only screen and (min-width:1200px) {
   /*Desktop styles here*/
@@ -757,7 +770,7 @@ input[type=button] {
   /* Hero */
   .hero-area h1 {
     font-size: 3.75em;
-    width: 60%;
+    width: 80%;
 }
 
   /* Aside */
@@ -786,12 +799,12 @@ input[type=button] {
   
   /* Reviews */
 
-  .reviews h2 {
-    padding-bottom: 50px; 
-  }
-
   .reviews article div {
     width: 42%;
+  }
+
+  .reviews h2 {
+    padding-bottom: 50px; 
   }
 
   footer h4 {
