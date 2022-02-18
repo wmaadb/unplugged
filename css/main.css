@@ -115,6 +115,7 @@ textarea {
  ol {
   list-style-type: none;
   margin: 0;
+  padding: 0;
  }
 
  a {
@@ -434,10 +435,6 @@ input[type=button] {
 .faq h2 {
   margin-bottom: 40px;
   line-height: 1;
-}
-
-.faq-content {
-  margin-bottom: 50px;
 }
 
 .faq-content {
